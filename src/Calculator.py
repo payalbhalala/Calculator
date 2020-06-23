@@ -1,3 +1,6 @@
+from Csv import CsvReader
+
+
 def addition(a, b):
     return a + b
 
@@ -25,8 +28,8 @@ class Calculator:
 
 
     def add(self, a, b):
-        self.result = a + b
-        return addition(a, b)
+        self.result = addition(a, b)
+        return self.result
 
 
     def subtract(self, a, b):
