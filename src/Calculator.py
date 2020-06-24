@@ -40,16 +40,16 @@ class Calculator:
         return self.result
 
     def multiply(self, a, b):
-        self.result = a * b
-        return multiplication(a, b)
+        self.result = multiplication(a, b)
+        return self.result
 
     def divide(self, a, b):
-        self.result = a / b
-        return division(a, b)
+        self.result = division(a, b)
+        return self.result
 
     def square(self, a):
-        self.result = a * a
-        return square(a)
+        self.result = square(a)
+        return self.result
 
     def squareroot(self, a):
         self.result = squareroot(a)
