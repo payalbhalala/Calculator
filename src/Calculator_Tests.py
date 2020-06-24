@@ -2,6 +2,7 @@ import unittest
 from Calculator import Calculator
 from Csv import CsvReader
 
+
 class MyTestCase(unittest.TestCase):
 
     def setUp(self) -> None:
@@ -9,8 +10,6 @@ class MyTestCase(unittest.TestCase):
 
     def test_instantiate_calculator(self):
         self.assertIsInstance(self.calculator, Calculator)
-
-
 
     def test_results_property_calculator(self):
         self.assertEqual(self.calculator.result, 0)
@@ -20,6 +19,7 @@ class MyTestCase(unittest.TestCase):
         for row in test_data_add:
             self.assertEqual(self.calculator.add(int(row['Value 1']), int(row['Value 2'])), int(row['Result']))
             self.assertEqual(self.calculator.result, int(row['Result']))
+
     def test_subtract_method_calculator(self):
         test_data_subtract = CsvReader('/src/Subtraction.csv').data
         for row in test_data_subtract:
@@ -47,7 +47,7 @@ class MyTestCase(unittest.TestCase):
     def test_square_root_method_calculator(self):
         test_data_square_root = CsvReader('/src/Square Root.csv').data
         for row in test_data_square_root:
-            self.assertEqual(self.calculator.square_root(int(row['Value 1'])), float(row['Result']))
+            self.assertEqual(self.calculator.squareroot(int(row['Value 1'])), float(row['Result']))
             self.assertEqual(self.calculator.result, float(row['Result']))
 
 
